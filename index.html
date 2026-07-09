@@ -38,6 +38,25 @@
             font-size: 1rem;
         }
 
+        .author-note {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 24px 30px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--line-color);
+        }
+
+        .author-note p {
+            margin: 0 0 12px;
+        }
+
+        .author-sign {
+            text-align: right;
+            color: var(--text-main);
+            font-style: italic;
+        }
+
         .container {
             max-width: 760px;
             margin: 0 auto;
@@ -94,6 +113,26 @@
             width: 100%;
             max-width: 450px;
             height: auto;
+        }
+
+        .photo-pair {
+            display: flex;
+            align-items: flex-end;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .photo-pair .photo-placeholder {
+            flex: 1 1 200px;
+            max-width: 280px;
+        }
+
+        .photo-pair .cartoon-placeholder {
+            flex: 0 1 180px;
+            max-width: 180px;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
         }
 
         /* 数据对比看板 */
@@ -192,6 +231,11 @@
         <p>NASA・IAU の最新の深宇宙観測データに基づき、各地の記念碑に記された古い情報や誤りを全面的に修正しました</p>
     </header>
 
+    <div class="author-note">
+        <p>このホームページは、お父さんに手伝ってもらって作りました。きっかけは、つくば市を旅行した時、中央公園でいくつかの太陽系の惑星を紹介する古い石碑を見つけたことです。石碑に書かれている天文データが、最新の科学的な観測結果と少し違っていることに気づきました。そこで、NASA公式の「Planetary Fact Sheets（惑星ファクトシート）」を使って詳しく比較してみたところ、石碑のすべての惑星データが、精度や単位の使い方の面で明らかに古くなっていることがわかりました。公園に遊びに来る観光客や天文好きの方々が、正確な天文知識をより手軽に知ることができるように、両親の助けと指導のもと、修正した正確なデータをまとめて、この小さな科学紹介ページを作りました。皆さんにリアルタイムで参考にしていただければと思います。</p>
+        <p class="author-sign">ちょう もとき<br>2026年7月9日</p>
+    </div>
+
     <div class="container">
 
         <!-- ==================== 1. 太陽 (SUN) ==================== -->
@@ -200,7 +244,10 @@
 
             <div class="stone-photo-container">
                 <h3>📷 原資料写真 (sun.jpg)</h3>
-                <img class="photo-placeholder" src="imags/sun.jpg" alt="太陽の碑文原資料写真">
+                <div class="photo-pair">
+                    <img class="photo-placeholder" src="imags/sun.jpg" alt="太陽の碑文原資料写真">
+                    <img class="cartoon-placeholder" src="imags/sun_cartoon.png" alt="子供が描いた太陽のイラスト" onerror="this.style.display='none'">
+                </div>
             </div>
 
             <div class="data-dashboard">
@@ -260,7 +307,10 @@
 
             <div class="stone-photo-container">
                 <h3>📷 原資料写真 (mercury.jpg)</h3>
-                <img class="photo-placeholder" src="imags/mercury.jpg" alt="水星の碑文原資料写真">
+                <div class="photo-pair">
+                    <img class="photo-placeholder" src="imags/mercury.jpg" alt="水星の碑文原資料写真">
+                    <img class="cartoon-placeholder" src="imags/mercury_cartoon.png" alt="子供が描いた水星のイラスト" onerror="this.style.display='none'">
+                </div>
             </div>
 
             <div class="data-dashboard">
@@ -288,7 +338,10 @@
 
             <div class="stone-photo-container">
                 <h3>📷 原資料写真 (venus.jpg)</h3>
-                <img class="photo-placeholder" src="imags/venus.jpg" alt="金星の碑文原資料写真">
+                <div class="photo-pair">
+                    <img class="photo-placeholder" src="imags/venus.jpg" alt="金星の碑文原資料写真">
+                    <img class="cartoon-placeholder" src="imags/venus_cartoon.png" alt="子供が描いた金星のイラスト" onerror="this.style.display='none'">
+                </div>
             </div>
 
             <div class="data-dashboard">
@@ -316,7 +369,10 @@
 
             <div class="stone-photo-container">
                 <h3>📷 原資料写真 (earth.jpg)</h3>
-                <img class="photo-placeholder" src="imags/earth.jpg" alt="地球の碑文原資料写真">
+                <div class="photo-pair">
+                    <img class="photo-placeholder" src="imags/earth.jpg" alt="地球の碑文原資料写真">
+                    <img class="cartoon-placeholder" src="imags/earth_cartoon.png" alt="子供が描いた地球のイラスト" onerror="this.style.display='none'">
+                </div>
             </div>
 
             <div class="data-dashboard">
@@ -344,7 +400,10 @@
 
             <div class="stone-photo-container">
                 <h3>📷 原資料写真 (mars.jpg)</h3>
-                <img class="photo-placeholder" src="imags/mars.jpg" alt="火星の碑文原資料写真">
+                <div class="photo-pair">
+                    <img class="photo-placeholder" src="imags/mars.jpg" alt="火星の碑文原資料写真">
+                    <img class="cartoon-placeholder" src="imags/mars_cartoon.png" alt="子供が描いた火星のイラスト" onerror="this.style.display='none'">
+                </div>
             </div>
 
             <div class="data-dashboard">
@@ -372,7 +431,10 @@
 
             <div class="stone-photo-container">
                 <h3>📷 原資料写真 (jupiter.jpg)</h3>
-                <img class="photo-placeholder" src="imags/jupiter.jpg" alt="木星の碑文原資料写真">
+                <div class="photo-pair">
+                    <img class="photo-placeholder" src="imags/jupiter.jpg" alt="木星の碑文原資料写真">
+                    <img class="cartoon-placeholder" src="imags/jupiter_cartoon.png" alt="子供が描いた木星のイラスト" onerror="this.style.display='none'">
+                </div>
             </div>
 
             <div class="data-dashboard">
@@ -400,7 +462,10 @@
 
             <div class="stone-photo-container">
                 <h3>📷 原資料写真 (saturn.jpg)</h3>
-                <img class="photo-placeholder" src="imags/saturn.jpg" alt="土星の碑文原資料写真">
+                <div class="photo-pair">
+                    <img class="photo-placeholder" src="imags/saturn.jpg" alt="土星の碑文原資料写真">
+                    <img class="cartoon-placeholder" src="imags/saturn_cartoon.png" alt="子供が描いた土星のイラスト" onerror="this.style.display='none'">
+                </div>
             </div>
 
             <div class="data-dashboard">
@@ -428,7 +493,10 @@
 
             <div class="stone-photo-container">
                 <h3>📷 原資料写真 (uranus.jpg)</h3>
-                <img class="photo-placeholder" src="imags/uranus.jpg" alt="天王星の碑文原資料写真">
+                <div class="photo-pair">
+                    <img class="photo-placeholder" src="imags/uranus.jpg" alt="天王星の碑文原資料写真">
+                    <img class="cartoon-placeholder" src="imags/uranus_cartoon.png" alt="子供が描いた天王星のイラスト" onerror="this.style.display='none'">
+                </div>
             </div>
 
             <div class="data-dashboard">
@@ -456,7 +524,10 @@
 
             <div class="stone-photo-container">
                 <h3>📷 原資料写真 (neptune.jpg)</h3>
-                <img class="photo-placeholder" src="imags/neptune.jpg" alt="海王星の碑文原資料写真">
+                <div class="photo-pair">
+                    <img class="photo-placeholder" src="imags/neptune.jpg" alt="海王星の碑文原資料写真">
+                    <img class="cartoon-placeholder" src="imags/neptune_cartoon.png" alt="子供が描いた海王星のイラスト" onerror="this.style.display='none'">
+                </div>
             </div>
 
             <div class="data-dashboard">
@@ -484,7 +555,10 @@
 
             <div class="stone-photo-container">
                 <h3>📷 原資料写真 (pluto.jpg)</h3>
-                <img class="photo-placeholder" src="imags/pluto.jpg" alt="冥王星の碑文原資料写真">
+                <div class="photo-pair">
+                    <img class="photo-placeholder" src="imags/pluto.jpg" alt="冥王星の碑文原資料写真">
+                    <img class="cartoon-placeholder" src="imags/pluto_cartoon.png" alt="子供が描いた冥王星のイラスト" onerror="this.style.display='none'">
+                </div>
             </div>
 
             <div class="data-dashboard">
